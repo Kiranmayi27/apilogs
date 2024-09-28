@@ -4,7 +4,7 @@ const express = require("express");
 // createing vars
 const app = express();
 // PORT
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 // operations route
 app.use("/", require("./routes/operations"));
@@ -18,5 +18,5 @@ app.use((req,res)=>{
 
 // app to listen to port
 app.listen(PORT,()=>{
-    console.log(`server started at http://localhost:${PORT}`);
+    console.log(`server started at ${PORT}`);
 })

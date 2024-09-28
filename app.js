@@ -3,8 +3,12 @@ const express = require("express");
 
 // createing vars
 const app = express();
+
 // PORT
 const PORT = process.env.PORT || 3001;
+
+// adding middlewares 
+app.use(express.json());
 
 // operations route
 app.use("/", require("./routes/operations"));
